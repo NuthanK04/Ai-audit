@@ -8,7 +8,7 @@ A comprehensive audit of AI tokenizer behavior and multilingual capacity allocat
 Evaluate tokenizer behavior across multiple languages using official FLORES-200 dataset:
 
 ```powershell
-cd your-submission/partA
+cd partA
 python prepare_flores.py --out data/flores_dev
 python audit_tokenizers.py --data data/flores_dev --tokenizer gpt2 --tokenizer hf:bert-base-multilingual-cased --out results.csv
 ```
@@ -17,7 +17,7 @@ python audit_tokenizers.py --data data/flores_dev --tokenizer gpt2 --tokenizer h
 Run verification scripts to validate capacity allocation:
 
 ```powershell
-cd your-submission/partB
+cd partB
 python b1_calculation.py
 python b3_verify.py
 python b4_verify.py
@@ -27,7 +27,7 @@ python b4_verify.py
 Estimate capacity implications:
 
 ```powershell
-cd your-submission/partC
+cd partC
 python estimate.py
 ```
 
@@ -36,37 +36,37 @@ python estimate.py
 ```
 ├── README.md                          # This file
 ├── NOTEBOOK.md                        # Chronological research log
-├── AI_USAGE.md                        # AI assistance documentation
-├── your-submission/
-│   ├── partA/                         # Tokenizer Audit
-│   │   ├── README.md                  # Full Part A documentation
-│   │   ├── prepare_flores.py          # Download FLORES-200 corpus
-│   │   ├── audit_tokenizers.py        # Run tokenizer comparison
-│   │   ├── experiments.py             # Additional tokenizer experiments
-│   │   ├── fertility_split_fix.py     # Whitespace handling fix
-│   │   ├── fertility_ratio_fix.py     # Normalization fix validation
-│   │   ├── corpus_selection.md        # Corpus methodology
-│   │   ├── results.csv                # Measured tokenizer metrics
-│   │   ├── results.md                 # Results interpretation
-│   │   ├── recommendation_memo.md     # Key findings summary
-│   │   ├── requirements.txt           # Python dependencies
-│   │   └── data/
-│   │       └── flores_dev/            # FLORES-200 multilingual corpus
-│   ├── partB/                         # Capacity Allocation
-│   │   ├── answers.md                 # Written answers
-│   │   ├── b1_calculation.py          # Question 1 calculations
-│   │   ├── b3_verify.py               # Question 3 verification
-│   │   ├── b4_verify.py               # Question 4 verification
-│   │   └── memo.md                    # Analysis notes
-│   └── partC/                         # Estimation
-│       ├── memo.md                    # Methodology and findings
-│       ├── estimate.py                # Capacity estimation
-│       └── results.md                 # Estimation results
+├── REPORT_v0.md                       # Initial findings report
+├── fertility.py                       # Reference tokenizer implementation
+├── partA/                             # Tokenizer Audit
+│   ├── README.md                      # Full Part A documentation
+│   ├── prepare_flores.py              # Download FLORES-200 corpus
+│   ├── audit_tokenizers.py            # Run tokenizer comparison
+│   ├── experiments.py                 # Additional tokenizer experiments
+│   ├── fertility_split_fix.py         # Whitespace handling fix
+│   ├── fertility_ratio_fix.py         # Normalization fix validation
+│   ├── corpus_selection.md            # Corpus methodology
+│   ├── results.csv                    # Measured tokenizer metrics
+│   ├── results.md                     # Results interpretation
+│   ├── recommendation_memo.md         # Key findings summary
+│   ├── requirements.txt               # Python dependencies
+│   └── data/
+│       └── flores_dev/                # FLORES-200 multilingual corpus
+├── partB/                             # Capacity Allocation
+│   ├── answers.md                     # Written answers
+│   ├── b1_calculation.py              # Question 1 calculations
+│   ├── b3_verify.py                   # Question 3 verification
+│   ├── b4_verify.py                   # Question 4 verification
+│   └── memo.md                        # Analysis notes
+├── partC/                             # Estimation
+│   ├── memo.md                        # Methodology and findings
+│   ├── estimate.py                    # Capacity estimation
+│   └── results.md                     # Estimation results
 ├── starter_kit/                       # Reference materials
 │   ├── fertility.py
 │   ├── REPORT_v0.md
 │   ├── bench/
-│   ├── corpus_sample/
+│   └── corpus_sample/
 ├── bench/                             # Benchmark logs
 └── corpus_sample/                     # Sample corpus reference
 ```
@@ -94,10 +94,10 @@ Summary of AI assistance during the assignment:
 - Measured corrections show GPT-2 Hindi/English divergence is **7.45×** (not 6.35×)
 
 ### Part B: Capacity Allocation
-See [your-submission/partB/answers.md](your-submission/partB/answers.md)
+See [partB/answers.md](partB/answers.md)
 
 ### Part C: Estimation
-See [your-submission/partC/memo.md](your-submission/partC/memo.md)
+See [partC/memo.md](partC/memo.md)
 
 ## Technologies
 
