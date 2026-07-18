@@ -99,14 +99,35 @@ See [partB/answers.md](partB/answers.md)
 ### Part C: Estimation
 See [partC/memo.md](partC/memo.md)
 
-## Technologies
+## Technologies & Dependencies
 
-- **Python 3.9+**
-- **Hugging Face Transformers** — tokenizer implementations
-- **Hugging Face Datasets** — FLORES-200 corpus
-- **tiktoken** — GPT-2 reference tokenizer
-- **pandas** — data aggregation
-- **pytest** — verification
+### Core Language & Runtime
+- **Python 3.9+** — Primary programming language
+- **PowerShell 5.1** — Terminal/scripting for environment management
+
+### Data & Tokenization
+- **Hugging Face Transformers** — BERT multilingual tokenizer implementation
+- **Hugging Face Datasets** — FLORES-200 corpus download and management
+- **tiktoken** — OpenAI's GPT-2/GPT-3 tokenizer reference implementation
+- **Unicode (unicodedata)** — NFC normalization and character handling
+
+### Data Processing & Analysis
+- **pandas** — CSV aggregation, metrics computation, data frames
+- **csv (stdlib)** — Results serialization and logging
+- **json (stdlib)** — Structured output for verification scripts
+
+### Verification & Testing
+- **pytest** — Unit testing framework (for verification scripts)
+- **pathlib** — Cross-platform file path handling
+- **argparse** — Command-line argument parsing for reproducibility
+
+### Development & Version Control
+- **Git** — Version control (GitHub repository)
+- **Python Standard Library** — csv, json, pathlib, argparse, unicodedata, collections
+
+### Environment
+- **VS Code** — Development editor
+- **GitHub** — Remote repository and version history
 
 ## Methodology
 
