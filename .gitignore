@@ -1,0 +1,12 @@
+# Local Python dependencies and caches used only while generating the submission
+your-submission/.deps/
+**/__pycache__/
+*.py[cod]
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+
+# Source material is retained locally but is not part of the submission repo
+starter_kit/
+__MACOSX/
